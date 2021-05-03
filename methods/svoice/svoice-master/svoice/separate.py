@@ -39,7 +39,7 @@ parser.add_argument('-v', '--verbose', action='store_const', const=logging.DEBUG
                     default=logging.INFO, help="More loggging")
 
 
-def save_wavs(estimate_source, mix_sig, lengths, filenames, out_dir, sr=16000):
+def save_wavs(estimate_source, mix_sig, lengths, filenames, out_dir, sr=8000):
     # Remove padding and flat
     flat_estimate = remove_pad(estimate_source, lengths)
     mix_sig = remove_pad(mix_sig, lengths)
